@@ -1,0 +1,15 @@
+.list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.link:global.active {
+  color: grey;
+  font-weight: 700;
+}
