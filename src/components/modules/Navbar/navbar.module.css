@@ -1,15 +1,24 @@
+.header {
+  background-color: blue;
+  padding: 20px 0px;
+}
+
 .list {
   list-style: none;
   display: flex;
   gap: 30px;
+  margin: 0;
 }
 
 .link {
   text-decoration: none;
   color: #000;
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 5px 20px;
 }
 
 .link:global.active {
-  color: grey;
+  background: orange;
   font-weight: 700;
 }

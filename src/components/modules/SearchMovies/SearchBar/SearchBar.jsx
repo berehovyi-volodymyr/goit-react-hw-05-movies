@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { GoSearch } from 'react-icons/go';
 
+import styles from './searchBar.module.css';
+
 const Searchbar = ({ onSubmit }) => {
   const [search, setSearch] = useState('');
 
@@ -20,21 +22,24 @@ const Searchbar = ({ onSubmit }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <button type="submit">
-          <GoSearch color="black" size="20px" />
-        </button>
+      <div className={styles.Searchbar}>
+        <form onSubmit={handleSubmit} className={styles.SearchForm}>
+          <button type="submit" className={styles.SearchFormButton}>
+            <GoSearch color="black" size="20px" />
+          </button>
 
-        <input
-          name="search"
-          value={search}
-          type="text"
-          autoComplete="off"
-          autoFocus
-          placeholder="Search movies"
-          onChange={handleChange}
-        />
-      </form>
+          <input
+            className={styles.SearchFormInput}
+            name="search"
+            value={search}
+            type="text"
+            autoComplete="off"
+            autoFocus
+            placeholder="Search movies"
+            onChange={handleChange}
+          />
+        </form>
+      </div>
     </>
   );
 };

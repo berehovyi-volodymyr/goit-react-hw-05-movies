@@ -12,7 +12,7 @@ const MovieList = ({ items }) => {
   ));
   return (
     <>
-      <h2>Trending today</h2>
+      <h2 className={styles.title}>Trending today</h2>
       <ul>{elements}</ul>
     </>
   );

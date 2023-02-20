@@ -1,0 +1,22 @@
+.details {
+  display: flex;
+  gap: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.list {
+  list-style: none;
+}
+
+.button {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  padding: 5px 10px;
+}
+
+.button:hover {
+  background-color: orange;
+}

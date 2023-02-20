@@ -1,0 +1,35 @@
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actor {
+  max-width: 200px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.bcg {
+  background-color: grey;
+}
+
+.name {
+  margin: 0;
+  padding: 10px;
+}
+
+.character {
+  margin: 0;
+}

@@ -24,3 +24,17 @@ export const movies = async search => {
   );
   return data;
 };
+
+export const castDetails = async id => {
+  const { data } = await axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/credits?api_key=e80646b33583990ee01efac2e0ae1d96`
+  );
+  return data;
+};
+
+export const reviewsDetails = async id => {
+  const { data } = await axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=e80646b33583990ee01efac2e0ae1d96`
+  );
+  return data;
+};

@@ -1,4 +1,15 @@
 .movie {
   text-decoration: none;
   color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.movie:hover {
+  color: red;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
 }
