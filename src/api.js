@@ -1,9 +1,5 @@
 import axios from 'axios';
 
-// const instance = axios.create({
-//   baseURL: 'https://api.themoviedb.org/3',
-// });
-
 export const trendingFilms = async () => {
   const { data } = await axios.get(
     'https://api.themoviedb.org/3/trending/movie/week?api_key=e80646b33583990ee01efac2e0ae1d96'

@@ -38,3 +38,13 @@
   font: inherit;
   font-size: 18px;
 }
+
+.SearchFormButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 20px;
+
+  margin-right: 10px;
+}

@@ -8,9 +8,9 @@ import {
 } from 'react-router-dom';
 import { movieById } from '../../api';
 
-import styles from './singleMovie.module.css';
+import styles from './movieDetails.module.css';
 
-const SingleMovie = () => {
+const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
   const { movieId } = useParams();
 
@@ -55,12 +55,12 @@ const SingleMovie = () => {
           <div>
             <ul className={styles.list}>
               <li>
-                <Link to="cast" state={from}>
+                <Link to="cast" state={{ from }}>
                   Cast
                 </Link>
               </li>
               <li>
-                <Link to="reviews" state={from}>
+                <Link to="reviews" state={{ from }}>
                   Reviews
                 </Link>
               </li>
@@ -73,4 +73,4 @@ const SingleMovie = () => {
   );
 };
 
-export default SingleMovie;
+export default MovieDetails;

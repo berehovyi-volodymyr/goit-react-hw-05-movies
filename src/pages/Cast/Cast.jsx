@@ -6,6 +6,7 @@ import { castDetails } from '../../api';
 const Cast = () => {
   const [actors, setActors] = useState([]);
   const { movieId } = useParams();
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchCast = async () => {
@@ -13,6 +14,7 @@ const Cast = () => {
         const { cast } = await castDetails(movieId);
         setActors(cast);
       } catch (error) {
+        setError(true);
         console.log(error.message);
       }
     };
@@ -38,6 +40,7 @@ const Cast = () => {
 
   return (
     <>
+      {error && alert('Not found page')}
       <div className={styles.bcg}>
         <h2 className={styles.title}>Cast</h2>
         <ul className={styles.list}>{elements}</ul>

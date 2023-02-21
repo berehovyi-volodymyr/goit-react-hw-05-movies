@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
-import styles from './searchMovieList.module.css';
+import styles from './movieList.module.css';
 
-const SearchMovieList = ({ items }) => {
+const MovieList = ({ items }) => {
   const location = useLocation();
 
   const elements = items.map(({ id, title }) => (
@@ -22,4 +22,4 @@ const SearchMovieList = ({ items }) => {
   );
 };
 
-export default SearchMovieList;
+export default MovieList;

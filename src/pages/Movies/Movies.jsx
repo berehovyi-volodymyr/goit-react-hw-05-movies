@@ -1,12 +1,12 @@
-// import styles from './searchMovies.module.css'
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { movies } from '../../api';
-import Searchbar from './SearchBar/SearchBar';
-import SearchMovieList from './SearchMovieList/SearchMovieList';
+import Searchbar from '../../components/SearchBar/SearchBar';
+import MovieList from '../../components/MovieList/MovieList';
 
-const SearchMovies = () => {
+const Movies = () => {
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -28,6 +28,7 @@ const SearchMovies = () => {
         const { results } = await movies(search);
         setItems(results);
       } catch (error) {
+        setError(true);
         console.log(error.message);
       }
     };
@@ -36,10 +37,11 @@ const SearchMovies = () => {
 
   return (
     <>
+      {error && alert('Not found page')}
       <Searchbar onSubmit={searchFilms} />
-      <SearchMovieList items={items} />
+      <MovieList items={items} />
     </>
   );
 };
 
-export default SearchMovies;
+export default Movies;
